@@ -1,0 +1,1011 @@
+{
+    "type": "doc",
+    "content": [
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Текст",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Жирный текст",
+                    "type": "text",
+                    "marks": [
+                        {
+                            "type": "strong"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Курсивный текст",
+                    "type": "text",
+                    "marks": [
+                        {
+                            "type": "em"
+                        },
+                        {
+                            "type": "link",
+                            "attrs": {
+                                "href": "https://dev.gram.ax/-/-/-/-/catalog_0/new_article_0"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "ЖирКурс",
+                    "type": "text",
+                    "marks": [
+                        {
+                            "type": "strong"
+                        },
+                        {
+                            "type": "em"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Зачёркнутый текст ",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Надстрочный",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Подстрочный\\\\",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента taskList"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента mediaSingle"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента mediaGroup"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента mediaSingle"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "note",
+                    "attrs": {
+                        "type": "note",
+                        "title": ""
+                    },
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "К сожалению мы не поддерживаем экспорт элемента mention"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": " Упоминание",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "note",
+                    "attrs": {
+                        "type": "note",
+                        "title": ""
+                    },
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "К сожалению мы не поддерживаем экспорт элемента emoji"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "  Эмодзи",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "cut",
+            "attrs": {
+                "text": "Разворвчивание",
+                "expanded": "true",
+                "isInline": false
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "Эмм ну эээ",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "content": [
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    318
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "Первое",
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    188
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "Второе",
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    253
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "Третье",
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    318
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "30",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    188
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "40",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    253
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "50",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    318
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "60",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    188
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "70",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": [
+                                    253
+                                ]
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "90",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента extension"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "code_block",
+            "attrs": {
+                "params": "typescript"
+            },
+            "content": [
+                {
+                    "text": "interface Article {\\n    title: string;\\n    content: any;\\n}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "note",
+                    "attrs": {
+                        "type": "note",
+                        "title": ""
+                    },
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "К сожалению мы не поддерживаем экспорт элемента status"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "info",
+                "title": "Заголовок"
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "Инфо панель ",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "danger",
+                "title": "Заголовок"
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "Инфо панель другой статус",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "tip",
+                "title": "Заголовок"
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "mark",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "info",
+                "title": "Заголовок"
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "ready",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": "Заголовок"
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "warn",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "note",
+                    "attrs": {
+                        "type": "note",
+                        "title": ""
+                    },
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "К сожалению мы не поддерживаем экспорт элемента date"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": " Дата",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента decisionList"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "info",
+                "title": "Заголовок"
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "Инфо панель с эмодзи ура",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "bullet_list",
+            "attrs": {
+                "tight": false
+            },
+            "content": [
+                {
+                    "type": "list_item",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "text": "Маркированный",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "text": "Список",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента layoutSection"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Ссссылка",
+                    "type": "text",
+                    "marks": [
+                        {
+                            "type": "link",
+                            "attrs": {
+                                "href": "/wiki/spaces/~61fac4900d3777006a916fa4/pages/131146"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ordered_list",
+            "attrs": {
+                "order": 2,
+                "tight": false
+            },
+            "content": [
+                {
+                    "type": "list_item",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "text": "Нумерованный",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "text": "Список",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "attrs": {
+                "type": "note",
+                "title": ""
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "К сожалению мы не поддерживаем экспорт элемента rule"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": " Сверху разделитель",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "blockquote",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "Цитата умного человека",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 1
+            },
+            "content": [
+                {
+                    "text": "Заголовок h1",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 6
+            },
+            "content": [
+                {
+                    "text": "Заголовок h6",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "content": [
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "Таблица",
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "Заголовками",
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "text": "Со всеми",
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "version": 1
+}

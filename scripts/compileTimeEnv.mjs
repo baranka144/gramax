@@ -25,11 +25,11 @@ if (!process.env.COOKIE_SECRET) console.warn("WARNING: You need to set COOKIE_SE
 const getBuiltInVariables = () => Object.keys(env).reduce((obj, x) => ({ ...obj, [x]: process.env[x] ?? env[x] }), {});
 
 const setVersion = (platform) => {
-	const commitCount = execSync('git rev-list --count --date=local --after="$(date +"%Y-%m-01T00:00:00")" HEAD', {
-		shell: "bash",
-	});
-	const currentDate = execSync("date +%Y.%-m.%-d", { shell: "bash" });
-	process.env.GRAMAX_VERSION = `${currentDate}-${platform}.${commitCount}`.replace("\n", "");
+	// const commitCount = execSync('git rev-list --count --date=local --after="$(date +"%Y-%m-01T00:00:00")" HEAD', {
+	// 	shell: "bash",
+	// });
+	// const currentDate = execSync("date +%Y.%-m.%-d", { shell: "bash" });
+	process.env.GRAMAX_VERSION = 'null';
 };
 
 export default { getBuiltInVariables, setVersion };

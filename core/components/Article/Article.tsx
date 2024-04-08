@@ -55,6 +55,7 @@ const Article = ({ data }: { data: ArticlePageData }) => {
 	};
 
 	const onContentUpdate = ({ editor }: { editor: Editor }) => {
+		console.log(editor.getJSON());
 		const f = async () => {
 			const articleContentEdit = JSON.stringify(editor.getJSON());
 			const url = apiUrlCreator.updateArticleContent();

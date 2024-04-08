@@ -23,6 +23,7 @@ import deleteOpenApi from "../../../elements/openApi/edit/logic/deleteOpenApi";
 import ExtensionUpdater from "../../../elementsUtils/editExtensionUpdator/ExtensionUpdater";
 import ContextWrapper from "./ContextWrapper";
 import Menu from "./Menu/Menu";
+import test from "./test.json";
 
 export const ContentEditorId = "ContentEditorId";
 
@@ -67,7 +68,7 @@ const ContentEditor = (props: ContentEditorProps) => {
 
 	const editor = useEditor(
 		{
-			content: JSON.parse(content) as JSONContent,
+			content: test,//JSON.parse(content) as JSONContent,
 			extensions: ExtensionUpdater.getUpdatedExtension([
 				...extensions,
 				OnDeleteNode.configure({ onDeleteNodes }),
