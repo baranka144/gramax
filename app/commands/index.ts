@@ -8,6 +8,7 @@ import download from "./download";
 import elements from "./elements";
 import healthcheck from "./healthcheck";
 import html from "./html";
+import imports from "./imports";
 import item from "./item";
 import page from "./pageData";
 import plugin from "./plugin";
@@ -34,6 +35,7 @@ const commands = {
 	word,
 	debug,
 	plugin,
+	imports,
 };
 
 type CommandTree = typeof commands;
