@@ -1,6 +1,8 @@
+import { JSONContent } from "@tiptap/react";
+
 export interface Article {
     title: string;
-    content: string;
+    content: JSONContent;
 }
 
 export async function getConfluenceArticles(atlassianUrl, base64AuthString): Promise<Article[]> {
@@ -19,7 +21,7 @@ export async function getConfluenceArticles(atlassianUrl, base64AuthString): Pro
     const data = await response.json() as Promise<any>;
     const articles: Article[] = (await data).results.map((result: any) => ({
         title: result.title,
-        content: result.body.atlas_doc_format.value,
+        content: JSON.parse(result.body.atlas_doc_format.value) as JSONContent,
     }));
     return articles;
 }

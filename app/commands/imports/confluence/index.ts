@@ -4,7 +4,7 @@ import { DesktopModeMiddleware } from "@core/Api/middleware/DesktopModeMiddlewar
 import ReloadConfirmMiddleware from "@core/Api/middleware/ReloadConfirmMiddleware";
 import { JSONContent } from "@tiptap/react";
 import { Command } from "../../../types/Command";
-import { checkConfluenceArticles, convertConfluenceToGramax } from "./convertToGrammax";
+import { checkConfluenceArticles, convertConfluenceToGramax } from "./convertToGramax";
 import { getConfluenceArticles } from "./fetchArticles";
 
 //данные для atlassian
@@ -29,9 +29,9 @@ const importConfluence: Command<{ atlassianUrl: string; email: string; token: st
 		const unsupportedTypes = await checkConfluenceArticles(articles);
 
 		console.log(unsupportedTypes);
-		const content = convertConfluenceToGramax(JSON.parse(articles[0].content) as JSONContent);
+		const contents:{title: string, content: JSONContent}[] = convertConfluenceToGramax(articles);
 
-		console.log(content);
+		console.log(contents);
 		const markdown = "\n\n";
 
 		return;

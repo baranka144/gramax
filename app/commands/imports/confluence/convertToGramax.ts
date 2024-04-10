@@ -1,4 +1,5 @@
-import { Article } from "@app/commands/article/fetchArticles";
+import { Article } from "@app/commands/imports/confluence/fetchArticles";
+
 
 enum SupportedTypes {
 	doc = "doc",
@@ -188,21 +189,30 @@ function convertConfluenceNodeToGramaxNode(confluenceNode: JSONContent): JSONCon
 	return convertUnsupportedTypeNode((confluenceNode));
 }
 
-export function convertConfluenceToGramax(confluenceJSON: JSONContent): JSONContent {
+function convertArticleConfToGramax(confluenceJSON: JSONContent): JSONContent {
 	const gramaxJSON = convertConfluenceNodeToGramaxNode(confluenceJSON);
 	if (confluenceJSON.content) {
 		gramaxJSON.content = confluenceJSON.content.map((content: JSONContent) => {
-			return convertConfluenceToGramax(content);
+			return convertArticleConfToGramax(content);
 		});
 	}
 	return gramaxJSON;
 }
 
+export function convertConfluenceToGramax(confluenceArticles: Article[]): Article[] {
+	const gramaxArticles: Article[] = confluenceArticles.map((article: Article) => {
+		return {
+			title: article.title,
+			content: convertArticleConfToGramax(article.content)
+		}
+	})
+	return gramaxArticles
+}
+
 export function checkConfluenceArticles(articles: Article[]): Set<string> {
     const unsupportedTypes: Set<string> = new Set();
     articles.map((article: Article) => {
-        let confluenceJSON = JSON.parse(article.content) as JSONContent
-        checkSingleArticle(confluenceJSON, unsupportedTypes);
+        checkSingleArticle(article.content, unsupportedTypes);
     })
     return unsupportedTypes;
 }
