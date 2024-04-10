@@ -16,8 +16,16 @@
                             "type": "text"
                         },
                         {
-                            "type": "text",
-                            "text": " "
+                            "type": "inlineExtension",
+                            "attrs": {
+                                "extensionType": "com.atlassian.confluence.migration",
+                                "extensionKey": "inline-external-image",
+                                "parameters": {
+                                    "src": "https://confluence.atlassian.com/images/icons/edit_pencil.png",
+                                    "width": "",
+                                    "height": ""
+                                }
+                            }
                         },
                         {
                             "text": ". Чтобы удалить страницу, откройте ",
@@ -25,7 +33,12 @@
                         },
                         {
                             "text": "...",
-                            "type": "text"
+                            "type": "text",
+                            "marks": [
+                                {
+                                    "type": "strong"
+                                }
+                            ]
                         },
                         {
                             "text": " (меню «три точки»), а затем выберите ",
@@ -33,7 +46,12 @@
                         },
                         {
                             "text": "Delete (Удалить)",
-                            "type": "text"
+                            "type": "text",
+                            "marks": [
+                                {
+                                    "type": "strong"
+                                }
+                            ]
                         },
                         {
                             "text": ".",
@@ -50,8 +68,12 @@
             },
             "content": [
                 {
-                    "type": "text",
-                    "text": " "
+                    "type": "emoji",
+                    "attrs": {
+                        "id": "atlassian-blue_star",
+                        "text": ":blue_star:",
+                        "shortName": ":blue_star:"
+                    }
                 },
                 {
                     "text": " Date",
@@ -69,8 +91,12 @@
             },
             "content": [
                 {
-                    "type": "text",
-                    "text": " "
+                    "type": "emoji",
+                    "attrs": {
+                        "id": "atlassian-blue_star",
+                        "text": ":blue_star:",
+                        "shortName": ":blue_star:"
+                    }
                 },
                 {
                     "text": " Participants",
@@ -94,7 +120,7 @@
             },
             "content": [
                 {
-                    "type": "list_item",
+                    "type": "listItem",
                     "content": [
                         {
                             "type": "paragraph"
@@ -102,7 +128,7 @@
                     ]
                 },
                 {
-                    "type": "list_item",
+                    "type": "listItem",
                     "content": [
                         {
                             "type": "paragraph",
@@ -124,8 +150,12 @@
             },
             "content": [
                 {
-                    "type": "text",
-                    "text": " "
+                    "type": "emoji",
+                    "attrs": {
+                        "id": "atlassian-blue_star",
+                        "text": ":blue_star:",
+                        "shortName": ":blue_star:"
+                    }
                 },
                 {
                     "text": " Goals",
@@ -149,7 +179,7 @@
             },
             "content": [
                 {
-                    "type": "list_item",
+                    "type": "listItem",
                     "content": [
                         {
                             "type": "paragraph"
@@ -165,8 +195,12 @@
             },
             "content": [
                 {
-                    "type": "text",
-                    "text": " "
+                    "type": "emoji",
+                    "attrs": {
+                        "id": "atlassian-blue_star",
+                        "text": ":blue_star:",
+                        "shortName": ":blue_star:"
+                    }
                 },
                 {
                     "text": " Discussion topics",
@@ -196,7 +230,12 @@
                                     "content": [
                                         {
                                             "text": "Time",
-                                            "type": "text"
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -218,7 +257,12 @@
                                     "content": [
                                         {
                                             "text": "Item",
-                                            "type": "text"
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -240,7 +284,12 @@
                                     "content": [
                                         {
                                             "text": "Presenter",
-                                            "type": "text"
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -262,7 +311,12 @@
                                     "content": [
                                         {
                                             "text": "Notes",
-                                            "type": "text"
+                                            "type": "text",
+                                            "marks": [
+                                                {
+                                                    "type": "strong"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -329,13 +383,10 @@
                             },
                             "content": [
                                 {
-                                    "type": "bullet_list",
-                                    "attrs": {
-                                        "tight": false
-                                    },
+                                    "type": "bulletList",
                                     "content": [
                                         {
-                                            "type": "list_item",
+                                            "type": "listItem",
                                             "content": [
                                                 {
                                                     "type": "paragraph",
@@ -371,8 +422,7 @@
                                     "type": "paragraph",
                                     "content": [
                                         {
-                                            "type": "text",
-                                            "text": " "
+                                            "type": "hardBreak"
                                         }
                                     ]
                                 }
@@ -392,8 +442,7 @@
                                     "type": "paragraph",
                                     "content": [
                                         {
-                                            "type": "text",
-                                            "text": " "
+                                            "type": "hardBreak"
                                         }
                                     ]
                                 }
@@ -413,8 +462,7 @@
                                     "type": "paragraph",
                                     "content": [
                                         {
-                                            "type": "text",
-                                            "text": " "
+                                            "type": "hardBreak"
                                         }
                                     ]
                                 }
@@ -434,8 +482,7 @@
                                     "type": "paragraph",
                                     "content": [
                                         {
-                                            "type": "text",
-                                            "text": " "
+                                            "type": "hardBreak"
                                         }
                                     ]
                                 }
@@ -452,8 +499,12 @@
             },
             "content": [
                 {
-                    "type": "text",
-                    "text": " "
+                    "type": "emoji",
+                    "attrs": {
+                        "id": "atlassian-blue_star",
+                        "text": ":blue_star:",
+                        "shortName": ":blue_star:"
+                    }
                 },
                 {
                     "text": " Action items",
@@ -477,7 +528,7 @@
             },
             "content": [
                 {
-                    "type": "list_item",
+                    "type": "listItem",
                     "content": [
                         {
                             "type": "paragraph",
@@ -499,8 +550,12 @@
             },
             "content": [
                 {
-                    "type": "text",
-                    "text": " "
+                    "type": "emoji",
+                    "attrs": {
+                        "id": "atlassian-blue_star",
+                        "text": ":blue_star:",
+                        "shortName": ":blue_star:"
+                    }
                 },
                 {
                     "text": " Decisions",
@@ -514,16 +569,6 @@
                 {
                     "text": "Type /decision to record the decisions you make in this meeting:",
                     "type": "text"
-                }
-            ]
-        },
-        {
-            "type": "text",
-            "text": " ",
-            "content": [
-                {
-                    "type": "text",
-                    "text": " "
                 }
             ]
         }

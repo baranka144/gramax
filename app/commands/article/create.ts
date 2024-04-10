@@ -8,23 +8,24 @@ import ResourceUpdater from "@core/Resource/ResourceUpdater";
 import { defaultLanguage } from "@ext/localization/core/model/Language";
 import { Command } from "../../types/Command";
 
-const create: Command<{ ctx: Context; catalogName: string; parentPath?: Path }, string> = Command.create({
+const create: Command<{ ctx: Context; catalogName: string; parentPath?: Path, articleTitle?: string, markdown?: string }, string> = Command.create({
 	path: "article/create",
 
 	kind: ResponseKind.plain,
 
 	middlewares: [new AuthorizeMiddleware(), new DesktopModeMiddleware(), new ReloadConfirmMiddleware()],
 
-	async do({ ctx, catalogName, parentPath }) {
+	async do({ ctx, catalogName, parentPath, articleTitle, markdown }) {
 		const { formatter, lib, parser, parserContextFactory } = this._app;
 		const catalog = await lib.getCatalog(catalogName);
 		const fp = lib.getFileProviderByCatalog(catalog);
 		const parentRef = fp.getItemRef(parentPath);
 
-		const markdown = "\n\n";
+		const title = articleTitle ?? "";
+		const content = markdown ?? "\n\n";
 		const article = await catalog.createArticle(
 			new ResourceUpdater(ctx, catalog, parser, parserContextFactory, formatter),
-			markdown,
+			content,
 			ctx.lang ?? defaultLanguage,
 			parentPath ? parentRef : null,
 		);

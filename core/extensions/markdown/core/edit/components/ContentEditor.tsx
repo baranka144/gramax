@@ -68,7 +68,7 @@ const ContentEditor = (props: ContentEditorProps) => {
 
 	const editor = useEditor(
 		{
-			content: test,//JSON.parse(content) as JSONContent,
+			content: JSON.parse(content) as JSONContent,
 			extensions: ExtensionUpdater.getUpdatedExtension([
 				...extensions,
 				OnDeleteNode.configure({ onDeleteNodes }),

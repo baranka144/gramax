@@ -1,4 +1,4 @@
-import { Article } from "@app/commands/imports/confluence/fetchArticles";
+import { Article } from "@app/commands/imports/confluence/getConfluenceArticles";
 
 
 enum SupportedTypes {
@@ -39,17 +39,21 @@ function convertConfluenceParagraphNode(paragraphNode: JSONContent): JSONContent
 
 function convertConfluenceTextNode(textNode: JSONContent): JSONContent {
 	if (textNode.marks) {
-		textNode.marks = textNode.marks.filter((element) => element.type == "strong" ||
-			element.type == "em" ||
-			//hash? newHref? resPath?
-			element.type == "link");
+		textNode.marks = textNode.marks.filter((element) =>
+			element.type == "strong" ||
+			element.type == "em");// ||
+		// 	//hash? newHref? resPath?
+		// 	//element.type == "link")
 		if (textNode.marks.length == 0) delete textNode.marks;
 	};
 	return textNode;
 }
 
 function convertConfluenceHeadingNode(headingNode: JSONContent): JSONContent {
-	// id ? customID?
+	// id ? customID? align?
+	if (headingNode.marks) {
+		delete headingNode.marks
+	}
 	return headingNode;
 }
 
@@ -135,37 +139,42 @@ function convertConfluenceTableRowNode(tableRowNode: JSONContent): JSONContent {
 
 function convertConfluenceTableHeaderNode(tableHeaderNode: JSONContent): JSONContent {
 	if (!tableHeaderNode.attrs["colwidth"]) {
-		tableHeaderNode.attrs["colwidth"]  = null;
+		tableHeaderNode.attrs["colwidth"] = null;
 	}
 	return tableHeaderNode;
 }
 
 function convertConfluenceTableCellNode(tableCellNode: JSONContent): JSONContent {
 	if (!tableCellNode.attrs["colwidth"]) {
-		tableCellNode.attrs["colwidth"]  = null;
+		tableCellNode.attrs["colwidth"] = null;
 	}
 	return tableCellNode;
 }
 
-function convertUnsupportedTypeNode(UnsupportedTypeNode: JSONContent): JSONContent {
-	delete UnsupportedTypeNode.content;
-	let excuseNode: JSONContent = {
-		type: "note",
-		attrs: {
-			"type": "note",
-        	"title": ""
-		},
-		content: [
-			{
-				type: "paragraph",
-				content: [{
-					type: "text",
-					text: `К сожалению мы не поддерживаем экспорт элемента ${UnsupportedTypeNode.type}`
-				}]
-			}
-		]
+//возможно на удаление
+function convertUnsupportedTypeNode(UnsupportedTypeNode: JSONContent) {
+	let testNode: JSONContent = {
+		type: "unsupported"
 	}
-	return excuseNode;
+	return testNode
+
+	// let excuseNode: JSONContent = {
+	// 	type: "note",
+	// 	attrs: {
+	// 		"type": "note",
+	//     	"title": ""
+	// 	},
+	// 	content: [
+	// 		{
+	// 			type: "paragraph",
+	// 			content: [{
+	// 				type: "text",
+	// 				text: `К сожалению мы не поддерживаем экспорт элемента ${UnsupportedTypeNode.type}`
+	// 			}]
+	// 		}
+	// 	]
+	// }
+	// return excuseNode;
 }
 
 function convertConfluenceNodeToGramaxNode(confluenceNode: JSONContent): JSONContent | undefined {
@@ -185,22 +194,25 @@ function convertConfluenceNodeToGramaxNode(confluenceNode: JSONContent): JSONCon
 	if (confluenceNode.type == SupportedTypes.tableRow) return convertConfluenceTableRowNode((confluenceNode));
 	if (confluenceNode.type == SupportedTypes.tableHeader) return convertConfluenceTableHeaderNode((confluenceNode));
 	if (confluenceNode.type == SupportedTypes.tableCell) return convertConfluenceTableCellNode((confluenceNode));
-	//console.log(confluenceNode.type);
-	return convertUnsupportedTypeNode((confluenceNode));
+	console.log(confluenceNode.type);
+	return //convertUnsupportedTypeNode((confluenceNode));
 }
 
-function convertArticleConfToGramax(confluenceJSON: JSONContent): JSONContent {
+function convertArticleConfToGramax(confluenceJSON: JSONContent): JSONContent | undefined {
 	const gramaxJSON = convertConfluenceNodeToGramaxNode(confluenceJSON);
-	if (confluenceJSON.content) {
-		gramaxJSON.content = confluenceJSON.content.map((content: JSONContent) => {
-			return convertArticleConfToGramax(content);
-		});
+	if (gramaxJSON) {
+		if (gramaxJSON.content) {
+			gramaxJSON.content = confluenceJSON.content.map((content: JSONContent) => {
+				return convertArticleConfToGramax(content);
+			}).filter(content => content !== undefined);
+		}
 	}
 	return gramaxJSON;
 }
 
 export function convertConfluenceToGramax(confluenceArticles: Article[]): Article[] {
 	const gramaxArticles: Article[] = confluenceArticles.map((article: Article) => {
+		console.log(article.title)
 		return {
 			title: article.title,
 			content: convertArticleConfToGramax(article.content)
@@ -210,20 +222,20 @@ export function convertConfluenceToGramax(confluenceArticles: Article[]): Articl
 }
 
 export function checkConfluenceArticles(articles: Article[]): Set<string> {
-    const unsupportedTypes: Set<string> = new Set();
-    articles.map((article: Article) => {
-        checkSingleArticle(article.content, unsupportedTypes);
-    })
-    return unsupportedTypes;
+	const unsupportedTypes: Set<string> = new Set();
+	articles.map((article: Article) => {
+		checkSingleArticle(article.content, unsupportedTypes);
+	})
+	return unsupportedTypes;
 }
 
 function checkSingleArticle(confluenceJSON: JSONContent, unsupportedTypes: Set<string>) {
-    if (SupportedTypes[confluenceJSON.type] === undefined) {
-        unsupportedTypes.add(confluenceJSON.type);
-    }
-    if (confluenceJSON.content) {
-        confluenceJSON.content.forEach((content: JSONContent) => {
-            checkSingleArticle(content, unsupportedTypes);
-        });
-    }
+	if (SupportedTypes[confluenceJSON.type] === undefined) {
+		unsupportedTypes.add(confluenceJSON.type);
+	}
+	if (confluenceJSON.content) {
+		confluenceJSON.content.forEach((content: JSONContent) => {
+			checkSingleArticle(content, unsupportedTypes);
+		});
+	}
 }
